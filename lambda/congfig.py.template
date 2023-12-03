@@ -1,0 +1,22 @@
+system_config = {
+    'default_s3_bucket': 'sagemaker-us-west-2-0123456789',
+    'deploy_s3_bucket': 'sagemaker-us-west-2-0123456789',
+    'deploy_s3_path_prefix': 'cpm-bee/deploy/code/',
+    'sagemaker_role': 'arn:aws:iam::0123456789:role/YOUR_ROLE,
+    'finetune_output_bucket': 'sagemaker-us-west-2-0123456789',
+    'finetune_output_s3_path_prefix': 'cpm-bee/finetune/output/',
+    'inference_image_uri': '0123456789.dkr.ecr.us-west-2.amazonaws.com/cpm-inference:latest',
+}
+
+model_config = {
+    'cpm-bee-hackthon': {
+        'local_path': 'cpm_bee_hackthon',
+        's3_uri': 's3://sagemaker-us-west-2-0123456789/llm/models/cpm-bee/hackthon/',
+        'instance_type': 'ml.g5.12xlarge',
+    },
+    'cpm-bee-hackthon-g4': {
+        'local_path': 'cpm_bee_hackthon',
+        's3_uri': 's3://sagemaker-us-west-2-0123456789/llm/models/cpm-bee/hackthon/',
+        'instance_type': 'ml.g4dn.12xlarge',
+    }
+}
